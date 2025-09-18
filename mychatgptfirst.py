@@ -3,11 +3,8 @@ import openai
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 from openai import OpenAI
-client = OpenAI(api_key="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")
-# 🔑 Вставь свои ключи
-TELEGRAM_TOKEN = "8311368695:AAHkVdoT_0sPiP2Xa44-QKGCN3BZ3HmrYNA"
-OPENAI_API_KEY = "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"
-
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 openai.api_key = OPENAI_API_KEY
 
 # Функция старта
@@ -39,3 +36,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
